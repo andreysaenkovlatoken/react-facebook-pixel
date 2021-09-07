@@ -5,8 +5,8 @@
   "main": "dist/fb-pixel.js",
   "types": "./types/index.d.ts",
   "scripts": {
-    "start": "export NODE_ENV=development&& webpack-dev-server --config webpack.config.dev.js",
-    "bundle": "export NODE_ENV=production&& webpack -p --config webpack.config.dist.js",
+    "start": "cross-env NODE_ENV=development&& webpack-dev-server --config webpack.config.dev.js",
+    "bundle": "cross-env NODE_ENV=production&& webpack -p --config webpack.config.dist.js",
     "lint": "eslint --ignore-path .gitignore --fix",
     "lint:staged": "lint-staged",
     "clean": "rm -rf node_modules",
@@ -40,6 +40,7 @@
     "autoprefixer": "9.7.3",
     "babel-eslint": "10.0.3",
     "babel-loader": "^8.0.6",
+    "cross-env": "^7.0.3",
     "eslint": "6.7.2",
     "eslint-config-airbnb": "18.0.1",
     "eslint-config-prettier": "^6.7.0",
